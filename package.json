@@ -1,0 +1,22 @@
+{
+  "name": "quochuytran_3_21032022",
+  "version": "1.0.0",
+  "description": "Projet  3 Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuochuyT/QuocHuyTran_3_21032022.git"
+  },
+  "author": "TRAN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuochuyT/QuocHuyTran_3_21032022/issues"
+  },
+  "homepage": "https://github.com/QuochuyT/QuocHuyTran_3_21032022#readme",
+  "dependencies": {
+    "sass": "^1.50.0"
+  }
+}

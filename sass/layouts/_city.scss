@@ -1,0 +1,15 @@
+//* City *//
+
+main .city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: #F3F3F3;
+    text-align: center;
+    padding: 16px;
+}
+
+main .city i {
+    font-size: 24px ;
+}

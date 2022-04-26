@@ -1,25 +1,54 @@
 //* Tuto *//
-@use "../utils/box-shadow.scss";
-@use "../utils/zoom";
+
 
 .tuto {
+    counter-reset: step;
     & ol {
         display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        @media (max-width: 800px){
-            flex-direction: column;
+        gap: 32px;
+        flex-direction: column;
+        @media (min-width: 800px){
+            flex-direction: row;
+            flex-wrap: wrap;
         }
     }
     & li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        list-style-type: none;
         background-color: #f6f6f6;
-        padding: 16px 32px;
-        border: 1px solid red;
+        padding: 24px 32px;
         flex-grow: 1;
-        border-radius: 16px;
-        @include box-shadow.base-shadow;
+        border-radius: 32px;
+        margin-left: 24px;
+        gap: 32px;
+        @include base-shadow;
         &:hover {
-            @include zoom.zoom;
+            @include zoom;
+        }
+        @media (min-width: 800px){
+            width: 230px;
+            flex-grow: 0;
+        }
+        &::before {
+            content: counter(step);
+            counter-increment: step;
+            color: white;
+            background-color: $purple;
+            width: 2 *$tuto-bullet-height;
+            height: 2 *$tuto-bullet-height;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            left: -16px;
+            position: absolute;
+            bottom: $tuto-bullet-height;
+            left: -1 *$tuto-bullet-height;  
+        }          
+        & i.fas {
+            margin-right: 16px;
+            color: $lightgrey;
         }
     }
 }

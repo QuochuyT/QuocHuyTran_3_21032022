@@ -1,13 +1,15 @@
 //* Tuto *//
 
 
-.tuto {
-    counter-reset: step;
+main .tuto {
+    counter-reset: ope;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 32px 32px 0 32px;
     & ol {
         display: flex;
-        gap: 32px;
         flex-direction: column;
-        @media (min-width: 800px){
+        @media (min-width: 768px){
             flex-direction: row;
             flex-wrap: wrap;
         }
@@ -18,18 +20,18 @@
         position: relative;
         list-style-type: none;
         background-color: #f6f6f6;
-        padding: 24px 32px;
+        padding: 24px;
         flex-grow: 1;
-        border-radius: 32px;
-        margin-left: 24px;
+        border-radius: 20px;
         gap: 32px;
         @include base-shadow;
         &:hover {
             @include zoom;
         }
-        @media (min-width: 800px){
-            width: 230px;
-            flex-grow: 0;
+        @media (min-width: 768px){
+            flex: 1;
+            margin: 0 0 0 32px;
+            margin-left: 12px;
         }
         &::before {
             content: counter(step);
@@ -43,8 +45,9 @@
             border-radius: 50%;
             left: -16px;
             position: absolute;
-            bottom: $tuto-bullet-height;
+            top: 50%;
             left: -1 *$tuto-bullet-height;  
+            transform: translateY(-50%);
         }          
         & i.fas {
             margin-right: 16px;

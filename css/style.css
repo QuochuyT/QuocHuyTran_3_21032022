@@ -213,4 +213,20 @@ main .section__restaurants-cards-desciption {
   margin: 0 0 8px 24px;
 }
 
+.footer {
+  align-items: center;
+  background-color: #353535;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 32px 32px 32px 32px;
+}
+
+.footer-link {
+  background: linear-gradient(to top, #FF79DA 0%, #FF79DA 10%, transparent 10.01%) no-repeat center bottom/0 100%;
+  color: #fff;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
 /*# sourceMappingURL=style.css.map */

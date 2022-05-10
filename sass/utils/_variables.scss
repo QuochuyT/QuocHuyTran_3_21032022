@@ -3,4 +3,7 @@ $colorsecondaire: #FF79DA;
 $colortertiaire: #99E2D0;
 
 $tuto-bullet-height: 16px;
-$breakpoint: 1000px;
+$breakpoint: (
+    tablette: 768px,
+    desktop: 992px,
+);

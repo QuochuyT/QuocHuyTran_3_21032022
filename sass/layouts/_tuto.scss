@@ -3,16 +3,17 @@
 
 main .tuto {
     counter-reset: ope;
+
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 32px 32px 0 32px;
     & ol {
         display: flex;
         flex-direction: column;
-        @media (min-width: 768px){
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
+        // @media (min-width: 768px){
+        //     flex-direction: row;
+        //     flex-wrap: wrap;
+        // }
     }
     & li {
         display: flex;
@@ -27,12 +28,9 @@ main .tuto {
         @include base-shadow;
         &:hover {
             @include zoom;
+            background-color: lighten($colorprimaire, 35%);
         }
-        @media (min-width: 768px){
-            flex: 1;
-            margin: 0 0 0 32px;
-            margin-left: 12px;
-        }
+
         &::before {
             content: counter(step);
             counter-increment: step;
@@ -52,6 +50,10 @@ main .tuto {
         & i.fas {
             margin-right: 16px;
             color: $lightgrey;
+
+        &:hover {
+            color: $colorprimaire;
+        }
         }
     }
 }

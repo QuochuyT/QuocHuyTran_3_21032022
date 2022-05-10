@@ -18,4 +18,110 @@
         align-items: center;
         justify-content: space-between;
     }
+
+    &-title {
+        font-family: Shrikhand,"curise";
+    }
+
+    &-button {
+        height: 2rem;
+        width: 2rem;
+        background-color: initial;
+        border: 0 solid transparent;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        background-color: #000;
+    }
+}
+
+.submenus {
+    display:grid;
+
+    .submenu {
+        max-width: 100%;
+        overflow: hidden;
+        padding: 8px 16px;
+
+        &-title {
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 0.5rem;
+            font-weight: 300;
+        }
+    }
+}
+
+.delay-0 {
+    animation: 0s;
+}
+
+.menuItem {
+    background-color: #fff;
+    padding: 16px;
+    display: flex;
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 4px 4px 16px rgb(0 0 0 / 10%);
+    overflow: hidden;
+    cursor: pointer;
+    animation: itemAppear .6s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+    transform: scale(1);
+    max-width: 100%;
+
+    &-header {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &-title {
+        margin: 0;
+    }
+
+    &-description {
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &-price {
+        font-weight: 700;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: 488px ;
+    }
+
+    &-confirmation {
+        background-color: #99e2d0;
+        margin: -16px -80px -16px 16px;
+        width: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: .5s;
+    }
+
+    &-wrapIcon {
+        height: 25.6px;
+        width: 25.6px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        transform: rotate(0deg);
+        transition-duration: .5s;
+    }
+
+    &-Icon {
+        color: #99e2d0;
+    }
 }

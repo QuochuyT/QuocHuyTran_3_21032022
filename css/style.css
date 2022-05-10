@@ -10,6 +10,8 @@
 body {
   margin: auto;
   font-family: "Roboto", sans-serif;
+  min-width: 375px;
+  max-width: 1250px;
 }
 
 main {
@@ -34,12 +36,6 @@ main .tuto ol {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 768px) {
-  main .tuto ol {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
 main .tuto li {
   display: flex;
   align-items: center;
@@ -53,15 +49,8 @@ main .tuto li {
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
 }
 main .tuto li:hover {
-  background-color: rgba(255, 121, 218, 0.1294117647);
   transform: scale(1.02);
-}
-@media (min-width: 768px) {
-  main .tuto li {
-    flex: 1;
-    margin: 0 0 0 32px;
-    margin-left: 12px;
-  }
+  background-color: #f2eafb;
 }
 main .tuto li::before {
   content: counter(step);
@@ -83,6 +72,9 @@ main .tuto li i.fas {
   margin-right: 16px;
   color: #7e7e7e;
 }
+main .tuto li i.fas:hover {
+  color: #9356DC;
+}
 
 main .city {
   display: flex;
@@ -92,31 +84,50 @@ main .city {
   background-color: #F3F3F3;
   text-align: center;
 }
-
 main .city i {
   font-size: 24px;
 }
+main .city-searchforminput {
+  border-right: none;
+  border-left: none;
+  border-top: #F3F3F3 24px solid;
+  border-bottom: #F3F3F3 24px solid;
+  background-color: #F3F3F3;
+  padding: 0 8px;
+  width: 220px;
+  font-weight: bold;
+  font-size: 26px;
+}
+main .city-searchforminput-placeholder {
+  color: black;
+}
 
-header {
-  font-family: "Shrikhand", cursive;
-  text-align: center;
+.header {
+  padding: 16px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-  padding: 4.8px;
-  margin: 0;
   position: relative;
+  z-index: 1000;
+}
+.header_logo {
+  font-family: Shrikhand, "cursive";
+  margin: 0;
+  text-align: center;
 }
 
 .explorer {
+  padding: 32px;
   text-align: center;
+  background-color: #fafafa;
 }
 
 .explorer h2 {
   margin-top: 16px;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .explorer p {
   font-size: 16px;
+  font-weight: 100;
 }
 
 .explorer button {
@@ -138,23 +149,22 @@ header {
 }
 
 main .section__restaurants {
+  flex-direction: column;
   background-color: #f7f7f7;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   margin: 32px 0 0 0;
   padding: 32px 32px 0 32px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   main .section__restaurants {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
-
 main .section__restaurants-title {
   width: 100%;
 }
-
 main .section__restaurants-card-image {
   width: 100%;
   height: 240px;
@@ -162,23 +172,19 @@ main .section__restaurants-card-image {
   max-height: 100%;
   object-fit: cover;
 }
-
 main .section__restaurants-cards {
   border-radius: 16px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   margin: 16px 0;
-  max-width: 45%;
   position: relative;
   transition: all 0.2s ease-in-out;
-  width: 100%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   main .section__restaurants-cards {
-    max-width: 100% !important;
+    width: 320px;
   }
 }
-
 main .section__restaurants-cards i {
   bottom: 16px;
   color: #000;
@@ -188,7 +194,6 @@ main .section__restaurants-cards i {
   right: 16px;
   transition: all 0.2s ease-in-out;
 }
-
 main .section__restaurants-cards-new {
   background-color: #99e2d0;
   border-radius: 5px;
@@ -198,35 +203,35 @@ main .section__restaurants-cards-new {
   right: 24px;
   top: 16px;
 }
-
-main .section__restaurants-cards [data-value=true] {
-  display: flex;
-}
-
 main .section__restaurants-cards-title {
   color: #000;
   margin: 8px 0 0 16px;
 }
-
-main .section__restaurants-cards-desciption {
+main .section__restaurants-cards-description {
   color: #000;
   margin: 0 0 8px 24px;
 }
 
 .footer {
-  align-items: center;
+  width: 100%;
   background-color: #353535;
+  color: white;
+  padding: 48px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 32px 32px 32px 32px;
+  flex-direction: column;
 }
-
 .footer-link {
   background: linear-gradient(to top, #FF79DA 0%, #FF79DA 10%, transparent 10.01%) no-repeat center bottom/0 100%;
   color: #fff;
-  height: 24px;
+  height: 32px;
   transition: all 0.3s ease-in-out;
+}
+.footer-link-title {
+  font-family: "Shrikhand", cursive;
+  font-style: italic;
+  font-weight: 700;
+  margin: 16px 0;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

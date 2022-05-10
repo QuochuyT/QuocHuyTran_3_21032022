@@ -1,0 +1,21 @@
+.menu1 {
+    max-width: 100%;
+    max-height: 512px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container-menu {
+    margin-top: -64px;
+    border-radius: 32px 32px 0 0;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: relative;
+
+    &-header {
+        padding: 16px 32px 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

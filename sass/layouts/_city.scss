@@ -7,8 +7,29 @@ main .city {
     gap: 16px;
     background-color: #F3F3F3;
     text-align: center;
+
+    & i {
+        font-size: 24px ;
+    }
+
+    &-searchforminput {
+        border-right: none;
+        border-left: none;
+        border-top: #F3F3F3 24px solid;
+        border-bottom: #F3F3F3 24px solid;
+        background-color: #F3F3F3;
+        padding: 0 8px;
+        width: 220px;
+        font-weight: bold;
+        font-size: 26px;
+
+        &-placeholder {
+            color: black;
+        }
+
+    }
 }
 
-main .city i {
-    font-size: 24px ;
-}
+// main .city i {
+//     font-size: 24px ;
+// }

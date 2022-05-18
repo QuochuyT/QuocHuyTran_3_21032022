@@ -29,6 +29,9 @@ main .tuto {
         &:hover {
             @include zoom;
             background-color: lighten($colorprimaire, 35%);
+            & .fas.fa-list-ul {
+                color: red;
+            }
         }
 
         &::before {
@@ -49,11 +52,7 @@ main .tuto {
         }          
         & i.fas {
             margin-right: 16px;
-            color: $lightgrey;
-
-        &:hover {
-            color: $colorprimaire;
-        }
+            color: $lightgrey
         }
     }
 }

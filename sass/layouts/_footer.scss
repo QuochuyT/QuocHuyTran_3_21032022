@@ -1,16 +1,23 @@
 .footer {
-    width: 100%;
     background-color: #353535;
     color: white;
     padding: 16px;
     display: flex;
     flex-direction: column;
-    // align-items: center;
-    // background-color: #353535;
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-around;
-    // padding: 32px 32px 32px 32px;
+
+    @media screen and (min-width: map-get($breakpoint,tablette)) {
+        align-items: center;
+    }
+
+    @media screen and (min-width: map-get($breakpoint,desktop)) {
+    align-items: baseline;
+    flex-direction: inherit;
+    gap: 138px;
+    padding: 24px 0px 24px 32px;
+    }
+
+
+
 
     &-link {
         background: linear-gradient(to top, #FF79DA 0%, #FF79DA 10%, transparent 10.01%) no-repeat center bottom/0 100%;

@@ -52,6 +52,9 @@ main .tuto li:hover {
   transform: scale(1.02);
   background-color: #f2eafb;
 }
+main .tuto li:hover .fas.fa-list-ul {
+  color: red;
+}
 main .tuto li::before {
   content: counter(step);
   counter-increment: step;
@@ -71,9 +74,6 @@ main .tuto li::before {
 main .tuto li i.fas {
   margin-right: 16px;
   color: #7e7e7e;
-}
-main .tuto li i.fas:hover {
-  color: #9356DC;
 }
 
 main .city {
@@ -214,12 +214,24 @@ main .section__restaurants-cards-description {
 }
 
 .footer {
-  width: 100%;
   background-color: #353535;
   color: white;
   padding: 16px;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .footer {
+    align-items: baseline;
+    flex-direction: inherit;
+    gap: 138px;
+    padding: 24px 0px 24px 32px;
+  }
 }
 .footer-link {
   background: linear-gradient(to top, #FF79DA 0%, #FF79DA 10%, transparent 10.01%) no-repeat center bottom/0 100%;
@@ -275,6 +287,11 @@ main .section__restaurants-cards-description {
 .submenus {
   display: grid;
 }
+@media screen and (min-width: 992px) {
+  .submenus {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 .submenus .submenu {
   max-width: 100%;
   overflow: hidden;
@@ -285,6 +302,12 @@ main .section__restaurants-cards-description {
   position: relative;
   padding-bottom: 0.5rem;
   font-weight: 300;
+}
+@media screen and (min-width: 992px) {
+  .submenus .submenu-title {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 64px;
+  }
 }
 
 .delay-0 {
@@ -325,11 +348,30 @@ main .section__restaurants-cards-description {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-left: 488px;
+  width: 100px;
+}
+@media screen and (min-width: 992px) {
+  .menuItem-price {
+    font-weight: 600;
+    justify-content: flex-end;
+    width: 140px;
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+    max-width: 100%;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
 }
 .menuItem-confirmation {
   background-color: #99e2d0;
-  margin: -16px -80px -16px 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
   width: 64px;
   display: flex;
   align-items: center;

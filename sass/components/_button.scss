@@ -1,0 +1,17 @@
+.btn {
+    color: white;
+    font-weight: 300;
+    font-size: 24px;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 32px;
+    background-image: linear-gradient(to top, rgba(147,86,220,0.9),rgba(255,121,218,0.9));
+    transition: transform 200ms;
+    cursor: pointer;
+    @include base-shadow;
+
+    &:hover {
+        transform: scale(1.02);
+        opacity: 0.9;
+    }
+}

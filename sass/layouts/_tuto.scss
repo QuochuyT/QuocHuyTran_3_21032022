@@ -25,12 +25,13 @@ main .tuto {
         flex-grow: 1;
         border-radius: 20px;
         gap: 32px;
+        cursor: pointer;
         @include base-shadow;
         &:hover {
             @include zoom;
             background-color: lighten($colorprimaire, 35%);
-            & .fas.fa-list-ul {
-                color: red;
+            & .fas {
+                color: $colorprimaire;
             }
         }
 

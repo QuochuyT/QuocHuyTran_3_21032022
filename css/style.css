@@ -26,6 +26,23 @@ a {
   text-decoration: none;
 }
 
+.btn {
+  color: white;
+  font-weight: 300;
+  font-size: 24px;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 32px;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  transition: transform 200ms;
+  cursor: pointer;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+}
+.btn:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
 main .tuto {
   counter-reset: ope;
   flex-wrap: wrap;
@@ -46,14 +63,15 @@ main .tuto li {
   flex-grow: 1;
   border-radius: 20px;
   gap: 32px;
+  cursor: pointer;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
 }
 main .tuto li:hover {
   transform: scale(1.02);
   background-color: #f2eafb;
 }
-main .tuto li:hover .fas.fa-list-ul {
-  color: red;
+main .tuto li:hover .fas {
+  color: #9356DC;
 }
 main .tuto li::before {
   content: counter(step);
@@ -128,25 +146,7 @@ main .city-searchforminput-placeholder {
   font-weight: 100;
 }
 .explorer-button {
-  color: white;
-  font-weight: 300;
-  font-size: 24px;
-  padding: 16px 24px;
-  border: none;
-  border-radius: 32px;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  transition: transform 200ms;
   margin-top: 16px;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
-}
-.explorer .explorer button:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
-}
-
-.explorer button:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
 }
 
 main .section__restaurants {
@@ -270,19 +270,6 @@ main .section__restaurants-cards-description {
 .container-menu-title {
   font-family: Shrikhand, "curise";
 }
-.container-menu-button {
-  height: 2rem;
-  width: 2rem;
-  background-color: initial;
-  border: 0 solid transparent;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
-  background-color: #000;
-}
 
 .submenus {
   display: grid;
@@ -357,7 +344,6 @@ main .section__restaurants-cards-description {
     width: 140px;
     display: flex;
     align-items: flex-end;
-    padding: 24px;
     max-width: 100%;
     overflow: hidden;
     flex: 1;

@@ -11,8 +11,8 @@
 
 <body>
     <header class="header">
-        <a href="/index.html" class="blacklink">
-            <span id="arrowIcon" class="material-icon">arrowIcon</span>
+        <a href="../index.html" class="blacklink">
+            <i class="fa-solid fa-arrow-left"></i>
         </a>
         <h1 class="header_logo">ohmyfood</h1>            
     </header>
@@ -22,22 +22,26 @@
     <main class="container-menu">
         <header class="container-menu-header">
             <h2 class="container-menu-title">A la française</h2>
-            <button class="container-menu-button">
-                <i class="fa-2x fa-heart far menu__like container-menu__like--noBg" aria-hidden="true">
-                </i>
-                <i class="fa-2x fa-heart far menu__like container-menu__like--noBg" aria-hidden="true">
-                </i>
-            </button>
+            <div class="button_heart">
+            <i class="fa-regular fa-heart heart"></i>
+            <i class="fa-solid fa-heart heart__full"></i>
+            </div>
+            <!-- <button class="container-menu-button"> -->
+                <!-- <i class="fa-2x fa-heart far menu__like container-menu__like--noBg" aria-hidden="true">
+                </i> -->
+                <!-- <i class="fa-2x fa-heart far menu__like container-menu__like--noBg" aria-hidden="true">
+                </i> -->
+            <!-- </button> -->
         </header>
 
         <div class="submenus">
             <section class="submenu">   
                 <h3 class="submenu-title">Entrées</h3>
                     <section class="delai-0 menuItem">
-                        <header class="menuItem-header">
+                        <div class="menuItem-header">
                             <h4 class="menuItem-title">Tartare de poulet acidulé</h4>
                             <p class="menuItem-description">Aux zeste d'orange</p>
-                        </header>
+                        </div>
                             <div class="menuItem-price">25€</div>
                             <div class="menuItem-confirmation">
                                 <div class="menuItem-wrapIcon">
@@ -46,10 +50,10 @@
                             </div>
                     </section>
                     <section class="delai-1 menuItem">
-                        <header class="menuItem-header">
+                        <div class="menuItem-header">
                             <h4 class="menuItem-title">Velouté de légumes d'antan</h4>
                             <p class="menuItem-description">Carotte, panais, topinambour</p>
-                        </header>
+                        </div>
                             <div class="menuItem-price">35€</div>
                             <div class="menuItem-confirmation">
                                 <div class="menuItem-wrapIcon">
@@ -58,10 +62,10 @@
                             </div>
                     </section>
                     <section class="delai-2 menuItem">
-                        <header class="menuItem-header">
+                        <div class="menuItem-header">
                             <h4 class="menuItem-title">Soupe à l'oignon</h4>
                             <p class="menuItem-description">Révisitée</p>
-                        </header>
+                        </div>
                             <div class="menuItem-price">20€</div>
                             <div class="menuItem-confirmation">
                                 <div class="menuItem-wrapIcon">
@@ -73,10 +77,10 @@
             <section class="submenu">
                 <h3 class="submenu-title">Plats</h3>
                 <section class="delai-0 menuItem">
-                    <header class="menuItem-header">
+                    <div class="menuItem-header">
                         <h4 class="menuItem-title">Coquille Saint-Jacques</h4>
                         <p class="menuItem-description">Accompagnées d'une purée de panais</p>
-                    </header>
+                    </div>
                         <div class="menuItem-price">40€</div>
                         <div class="menuItem-confirmation">
                             <div class="menuItem-wrapIcon">
@@ -85,10 +89,10 @@
                         </div>
                 </section>
                 <section class="delai-1 menuItem">
-                    <header class="menuItem-header">
+                    <div class="menuItem-header">
                         <h4 class="menuItem-title">Magret de canard</h4>
                         <p class="menuItem-description">Et parmentier de pomme de terre</p>
-                    </header>
+                    </div>
                         <div class="menuItem-price">35€</div>
                         <div class="menuItem-confirmation">
                             <div class="menuItem-wrapIcon">
@@ -112,11 +116,13 @@
             <section class="submenu">
                 <h3 class="submenu-title">Desserts</h3>
                 <section class="delai-0 menuItem">
-                    <header class="menuItem-header">
+                    <!-- mettre div -->
+                    <div class="menuItem-header">
                         <h4 class="menuItem-title">Pétales de violettes glacés</h4>
                         <p class="menuItem-description">Et purée de noisettes</p>
-                    </header>
+                    </div>
                         <div class="menuItem-price">18€</div>
+                        <!-- mettre div  -->
                         <div class="menuItem-confirmation">
                             <div class="menuItem-wrapIcon">
                                 <i class="fa-check fas menuitem-Icon"></i>
@@ -124,10 +130,10 @@
                         </div>
                 </section>
                 <section class="delai-1 menuItem">
-                    <header class="menuItem-header">
+                    <div class="menuItem-header">
                         <h4 class="menuItem-title">Fondant au chocolat</h4>
                         <p class="menuItem-description">Révisté</p>
-                    </header>
+                    </div>
                         <div class="menuItem-price">22€</div>
                         <div class="menuItem-confirmation">
                             <div class="menuItem-wrapIcon">
@@ -136,10 +142,10 @@
                         </div>
                 </section>
                 <section class="delai-2 menuItem">
-                    <header class="menuItem-header">
+                    <div class="menuItem-header">
                         <h4 class="menuItem-title">Millefeuille croustillant</h4>
                         <p class="menuItem-description">Myrtilles et pâte d'amande</p>
-                    </header>
+                    </div>
                         <div class="menuItem-price">23€</div>
                         <div class="menuItem-confirmation">
                             <div class="menuItem-wrapIcon">
@@ -148,6 +154,10 @@
                         </div>
                 </section>
             </section>
+        </div>
+
+        <div class="Button_commande">    
+        <button class="btn">Commander</button>
         </div>
 
 

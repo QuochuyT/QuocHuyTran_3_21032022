@@ -152,4 +152,20 @@
     &-Icon {
         color: #99e2d0;
     }
+
+    &-menuItems {
+        padding: 16px;
+        max-width: 100%;
+        overflow: hidden;
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    &_button_commande {
+       margin: 64px auto;
+    }
 }
+
+

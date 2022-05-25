@@ -32,9 +32,16 @@ main .section__restaurants {
         transition: all .2s ease-in-out;
 
         @media screen and (min-width: map-get($breakpoint,tablette)) {
-            width: 320px;
-        // max-width: 100% !important;
+            width: 280px;
+            &:hover {     
+                @include zoom;
+                filter: brightness(1.1);
+                box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+                    
+                 }
+
         }
+        
 
         i   {
             bottom: 16px;
@@ -67,66 +74,3 @@ main .section__restaurants {
         }
     }
 }
-
-// main .section__restaurants-title {
-//     width: 100%;
-// }
-
-// main .section__restaurants-card-image {
-//     width: 100%;
-//     height: 240px;
-//     max-width: 100%;
-//     max-height: 100%;
-//     object-fit: cover;
-// }
-
-// main .section__restaurants-cards {
-//     border-radius: 16px;
-//     box-shadow: 0 5px 15px #00000033;
-//     overflow: hidden;
-//     margin: 16px 0;
-//     position: relative;
-//     transition: all .2s ease-in-out;
-
-//     @media screen and (min-width: map-get($breakpoint,tablette)) {
-//         width: 320px;
-//         color: red;
-
-//         // max-width: 100% !important;
-//     }
-// }
-
-// main .section__restaurants-cards i {
-//     bottom: 16px;
-//     color: #000;
-//     cursor: pointer;
-//     font-size: 25px;
-//     position: absolute;
-//     right: 16px;
-//     transition: all .2s ease-in-out;
-// }
-
-// main .section__restaurants-cards-new {
-//     background-color: #99e2d0;
-//     border-radius: 5px;
-//     color: #1f9970;
-//     padding: 8px;
-//     position: absolute;
-//     right: 24px;
-//     top: 16px;
-// }
-
-
-// main .section__restaurants-cards [data-value=true] {
-//     display: flex;
-// }
-
-// main .section__restaurants-cards-title {
-//     color: #000;
-//     margin: 8px 0 0 16px;
-// }
-
-// main .section__restaurants-cards-desciption {
-//     color: #000;
-//     margin: 0 0 8px 24px;
-// }

@@ -5,9 +5,17 @@
     object-fit: cover;
 }
 
+.header .blacklink {
+        margin: 16px;
+        position: absolute;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+}
+
 .container-menu {
-    margin-top: -64px;
-    border-radius: 32px 32px 0 0;
+    margin-top: -6px;
+    // border-radius: 32px 32px 0 0;
     background-color: #f6f6f6;
     z-index: 1;
     position: relative;
@@ -21,9 +29,14 @@
 
     &-title {
         font-family: Shrikhand,"curise";
+        margin: auto;
     }
 
-    // &-button {
+    .button_heart {
+        
+    }
+
+    // &-button_heart {
     //     height: 2rem;
     //     width: 2rem;
     //     background-color: initial;
@@ -38,6 +51,7 @@
     // }
 }
 
+
 .submenus {
     display:grid;
 
@@ -49,21 +63,24 @@
         max-width: 100%;
         overflow: hidden;
         padding: 8px 16px;
+        
 
         &-title {
             text-transform: uppercase;
             position: relative;
             padding-bottom: 0.5rem;
             font-weight: 300;
+            
 
         @media screen and (min-width: map-get($breakpoint,desktop)) {
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 64px;
-            
             }
         }
     }
 }
+
+
 
 .delay-0 {
     animation: 0s;

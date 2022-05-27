@@ -260,9 +260,16 @@ main .section__restaurants-cards-description {
   object-fit: cover;
 }
 
+.header .blacklink {
+  margin: 16px;
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
 .container-menu {
-  margin-top: -64px;
-  border-radius: 32px 32px 0 0;
+  margin-top: -6px;
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
@@ -275,8 +282,8 @@ main .section__restaurants-cards-description {
 }
 .container-menu-title {
   font-family: Shrikhand, "curise";
+  margin: auto;
 }
-
 .submenus {
   display: grid;
 }

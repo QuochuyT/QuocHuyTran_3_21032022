@@ -45,12 +45,8 @@ main .section__restaurants {
 
         i   {
             bottom: 16px;
-            color: #000;
-            cursor: pointer;
-            font-size: 25px;
             position: absolute;
-            right: 16px;
-            transition: all .2s ease-in-out;
+            right: 16px; 
         }
 
         &-new {

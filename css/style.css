@@ -33,7 +33,6 @@ a {
   padding: 16px 24px;
   border: none;
   border-radius: 32px;
-  margin: 32px 32px 32px 550px;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: transform 200ms;
   cursor: pointer;
@@ -42,6 +41,13 @@ a {
 .btn:hover {
   transform: scale(1.02);
   opacity: 0.9;
+}
+
+.heart {
+  color: #000;
+  cursor: pointer;
+  font-size: 25px;
+  transition: all 0.2s ease-in-out;
 }
 
 main .tuto {
@@ -194,12 +200,8 @@ main .section__restaurants-cards {
 }
 main .section__restaurants-cards i {
   bottom: 16px;
-  color: #000;
-  cursor: pointer;
-  font-size: 25px;
   position: absolute;
   right: 16px;
-  transition: all 0.2s ease-in-out;
 }
 main .section__restaurants-cards-new {
   background-color: #99e2d0;
@@ -284,6 +286,12 @@ main .section__restaurants-cards-description {
   font-family: Shrikhand, "curise";
   margin: auto;
 }
+.container-menu-heart i {
+  position: absolute;
+  top: 20px;
+  right: 32px;
+}
+
 .submenus {
   display: grid;
 }
@@ -311,7 +319,7 @@ main .section__restaurants-cards-description {
 }
 
 .delay-0 {
-  animation: 0s;
+  animation: 0.3 s;
 }
 
 .menuItem {
@@ -348,7 +356,7 @@ main .section__restaurants-cards-description {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  width: 100px;
+  padding-left: 750px;
 }
 @media screen and (min-width: 992px) {
   .menuItem-price {
@@ -377,6 +385,9 @@ main .section__restaurants-cards-description {
   justify-content: center;
   transition-duration: 0.5s;
 }
+.menuItem-confirmation:hover {
+  margin-right: -32px;
+}
 .menuItem-wrapIcon {
   height: 25.6px;
   width: 25.6px;
@@ -402,6 +413,11 @@ main .section__restaurants-cards-description {
 }
 .menuItem_button_commande {
   margin: 64px auto;
+}
+
+.button_commande {
+  text-align: center;
+  padding: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -32,9 +32,14 @@
         margin: auto;
     }
 
-    .button_heart {
-        
+    &-heart {
+        i {
+            position: absolute;
+            top: 20px;
+            right: 32px;
+        }
     }
+
 
     // &-button_heart {
     //     height: 2rem;
@@ -83,7 +88,7 @@
 
 
 .delay-0 {
-    animation: 0s;
+    animation: .3   s;
 }
 
 .menuItem {
@@ -124,7 +129,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        width: 100px;
+        padding-left: 750px;
 
         @media screen and (min-width: map-get($breakpoint,desktop)) {
             font-weight: 600;
@@ -152,6 +157,10 @@
         align-items: center;
         justify-content: center;
         transition-duration: .5s;
+
+        &:hover {
+            margin-right: -32px;
+        }
     }
 
     &-wrapIcon {
@@ -184,5 +193,12 @@
        margin: 64px auto;
     }
 }
+
+.button_commande {
+    text-align: center;
+    padding: 24px;
+}
+
+
 
 

@@ -47,9 +47,52 @@ a {
   color: #000;
   cursor: pointer;
   font-size: 25px;
-  transition: all 0.2s ease-in-out;
+}
+.heart__full {
+  opacity: 0;
+  background-color: #FF79DA;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.heart__full:hover {
+  opacity: 1;
+  transition: opacity 1s;
 }
 
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  height: 1000px;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.9;
+  animation: disappear 200ms 3s forwards;
+  transform-origin: top;
+}
+.loader:after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FF79DA;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out;
+  animation-iteration-count: 2;
+}
+
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 main .tuto {
   counter-reset: ope;
   flex-wrap: wrap;
@@ -293,23 +336,30 @@ main .section__restaurants-cards-description {
 }
 
 .submenus {
-  display: grid;
+  display: inherit;
 }
 @media screen and (min-width: 992px) {
   .submenus {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-.submenus .submenu {
+.submenus .submenu-title {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 8px;
+  font-weight: 400;
   max-width: 100%;
   overflow: hidden;
   padding: 8px 16px;
 }
-.submenus .submenu-title {
-  text-transform: uppercase;
-  position: relative;
-  padding-bottom: 0.5rem;
-  font-weight: 300;
+.submenus .submenu-title:after {
+  content: "";
+  width: 48px;
+  height: 4px;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 16px;
+  bottom: 0;
 }
 @media screen and (min-width: 992px) {
   .submenus .submenu-title {
@@ -318,8 +368,8 @@ main .section__restaurants-cards-description {
   }
 }
 
-.delay-0 {
-  animation: 0.3 s;
+.delai-0 {
+  animation-delay: 0s;
 }
 
 .menuItem {
@@ -335,54 +385,44 @@ main .section__restaurants-cards-description {
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   animation-fill-mode: both;
   transform: scale(1);
+  max-width: 100%;
 }
-.menuItem .menuItem-header {
+.menuItem-header {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  flex: 1;
 }
+
+.menuItem-header {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+
 .menuItem-title {
-  margin: 0;
-  padding: 0;
-  align-items: center;
+  margin: 0px;
 }
+
 .menuItem-description {
-  margin: auto;
+  margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
 .menuItem-price {
   font-weight: 700;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-left: 275px;
+  padding-left: 8px;
 }
-@media screen and (min-width: 768px) {
-  .menuItem-price {
-    padding-left: 325px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menuItem-price {
-    font-weight: 600;
-    justify-content: flex-end;
-    width: 140px;
-    display: flex;
-    align-items: flex-end;
-    max-width: 100%;
-    overflow: hidden;
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    max-width: 50px;
-  }
-}
+
 .menuItem-confirmation {
   background-color: #99e2d0;
-  margin: -16px -80px -16px 36px;
+  margin: -16px -80px -16px 16px;
   width: 64px;
   display: flex;
   align-items: center;
@@ -390,8 +430,9 @@ main .section__restaurants-cards-description {
   transition-duration: 0.5s;
 }
 .menuItem-confirmation:hover {
-  margin-right: -16px;
+  margin-right: 0px;
 }
+
 .menuItem-wrapIcon {
   height: 25.6px;
   width: 25.6px;
@@ -400,23 +441,12 @@ main .section__restaurants-cards-description {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  transform: rotate(0deg);
+  transform: rotate(180deg);
   transition-duration: 0.5s;
 }
-.menuItem-Icon {
+
+.menuitem-Icon {
   color: #99e2d0;
-}
-.menuItem-menuItem {
-  padding: 16px;
-  max-width: 100%;
-  overflow: hidden;
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-}
-.menuItem_button_commande {
-  margin: 64px auto;
 }
 
 .button_commande {

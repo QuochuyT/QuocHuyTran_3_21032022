@@ -2,5 +2,17 @@
     color: #000;
     cursor: pointer;
     font-size: 25px;
-    transition: all .2s ease-in-out;
+    
+    &__full {
+        opacity: 0;
+        background-color: $colorsecondaire;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        
+        &:hover {
+            opacity: 1;
+            transition: opacity 1s;
+        }
+    }
 }

@@ -58,131 +58,121 @@
 
 
 .submenus {
-    display:grid;
+    display: inherit;
 
     @media screen and (min-width: map-get($breakpoint,desktop)) {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .submenu {
+    .submenu-title {
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 8px;
+        font-weight: 400;
         max-width: 100%;
         overflow: hidden;
         padding: 8px 16px;
+
+        &:after {
+         content: "";
+         width: 48px;
+         height: 4px;
+         background-color: #99e2d0;
+         position: absolute;
+         left: 16px;
+         bottom: 0;
+        }
         
 
-        &-title {
-            text-transform: uppercase;
-            position: relative;
-            padding-bottom: 0.5rem;
-            font-weight: 300;
+        // &-title {
+        //     text-transform: uppercase;
+        //     position: relative;
+        //     padding-bottom: 0.5rem;
+        //     font-weight: 400;
             
 
         @media screen and (min-width: map-get($breakpoint,desktop)) {
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 64px;
             }
-        }
+        // }
     }
 }
 
 
 
-.delay-0 {
-    animation: .3   s;
+.delai-0 {
+    animation-delay: 0s;
 }
 
 .menuItem {
-    background-color: #fff;
-    padding: 16px;
-    display: flex;
-    border-radius: 12px;
-    margin: 16px 0;
-    box-shadow: 4px 4px 16px rgb(0 0 0 / 10%);
-    overflow: hidden;
-    cursor: pointer;
-    animation: itemAppear .6s;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-    animation-fill-mode: both;
-    transform: scale(1);
-    
-    
-    .menuItem-header {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
-    
-    &-title {
-        margin: 0;
-        padding: 0;
-        align-items: center;
-    }
-    
-    &-description {
-        margin: auto;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
-    
-    &-price {
-        font-weight: 700;
+        background-color: #fff;
+        padding: 16px;
         display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        padding-left: 275px;
+        border-radius: 12px;
+        margin: 16px 0;
+        box-shadow: 4px 4px 16px rgb(0 0 0 / 10%);
+        overflow: hidden;
+        cursor: pointer;
+        animation: itemAppear .6s;
+        animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+        animation-fill-mode: both;
+        transform: scale(1);
+        max-width: 100%; 
 
-        @media screen and (min-width: map-get($breakpoint,tablette)) {
-            padding-left: 325px;
-        }
-        
-        @media screen and (min-width: map-get($breakpoint,desktop)) {
-            font-weight: 600;
-            justify-content: flex-end;
-            width: 140px;
-            display: flex;
-            align-items: flex-end;
-            max-width: 100%;
+        &-header{
+            white-space: nowrap;
+            text-overflow: ellipsis;
             overflow: hidden;
             flex: 1;
-            display: flex;
-            justify-content: space-between;
-            gap: 16px;
-            max-width: 50px;
-
         }
+
     }
     
-    &-confirmation {
-        
-        background-color: #99e2d0;
-        margin: -16px -80px -16px 36px;
-        width: 64px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition-duration: .5s;
-        // $button-width: 48px;
-        // background-color: #99e2d0;
-        // margin-right: -64px;
-        // width: $button-width;
-        // position: absolute;
-        // right: 0;
-        // top: 0;
-        // height: 100%;
-        // width: 64px;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // transition-duration: .5s;
-        
-        &:hover {
-            margin-right: -16px;
-        }
-    }
+     
+.menuItem-header {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+}
 
+.menuItem-title {
+    margin: 0px;
+
+}
+
+.menuItem-description {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.menuItem-price {
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 8px;           
+}
+
+.menuItem-confirmation {
+    background-color: #99e2d0;
+    margin: -16px -80px -16px 16px;
+    width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+
+    &:hover{
+        margin-right: 0px;
+    }
     
-    &-wrapIcon {
+}
+
+.menuItem-wrapIcon {
         height: 25.6px;
         width: 25.6px;
         background-color: #fff;
@@ -190,36 +180,113 @@
         align-items: center;
         justify-content: center;
         border-radius: 100px;
-        transform: rotate(0deg);
-        transition-duration: .5s;
-        
-    }
-
-    &-Icon {
-        color: #99e2d0;
-    }
-
-
-
-    &-menuItem {
-        padding: 16px;
-        max-width: 100%;
-        overflow: hidden;
-        flex: 1;
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-    }
-
-    &_button_commande {
-       margin: 64px auto;
-    }
+        transform: rotate(180deg);
+        transition-duration: .5s;  
 }
+
+.menuitem-Icon {
+        color: #99e2d0; 
+}
+// &-title {
+        //     margin: 0;
+        // }
+
+        // &-description {
+        //     margin: 0;
+        //     white-space: nowrap;
+        //     text-overflow: ellipsis;
+        //     overflow: hidden;
+        // }
+
+        // &-price {
+        //     font-weight: 700;
+        //     display: flex;
+        //     justify-content: flex-end;
+        //     align-items: flex-end;
+        //     padding-left: 8px;           
+        // }
+
+        // @media screen and (min-width: map-get($breakpoint,tablette)) {
+        //         padding-left: 325px;
+        //     }
+
+        // @media screen and (min-width: map-get($breakpoint,desktop)) {
+        //     font-weight: 600;
+        //     justify-content: flex-end;
+        //     width: 140px;
+        //     display: flex;
+        //     align-items: flex-end;
+        //     max-width: 100%;
+        //     overflow: hidden;
+        //     flex: 1;
+        //     display: flex;
+        //     justify-content: space-between;
+        //     gap: 16px;
+        //     max-width: 50px;
+        // }
+
+        // &-confirmation {  
+        //         background-color: #99e2d0;
+        //         margin: -16px -80px -16px 36px;
+        //         width: 64px;
+        //         display: flex;
+        //         align-items: center;
+        //         justify-content: center;
+        //         transition-duration: .5s;
+                // $button-width: 48px;
+                // background-color: #99e2d0;
+                // margin-right: -64px;
+                // width: $button-width;
+                // position: absolute;
+                // right: 0;
+                // top: 0;
+                // height: 100%;
+                // width: 64px;
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                // transition-duration: .5s;
+                
+                // &:hover {
+                //     margin-right: -16px;
+                // }
+            
+        
+            
+            // &-wrapIcon {
+            //     height: 25.6px;
+            //     width: 25.6px;
+            //     background-color: #fff;
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            //     border-radius: 100px;
+            //     transform: rotate(0deg);
+            //     transition-duration: .5s;  
+            // }
+        
+            // &-Icon {
+            //     color: #99e2d0;
+            // }
+        
+            // &-menuItem {
+            //     padding: 16px;
+            //     max-width: 100%;
+            //     overflow: hidden;
+            //     flex: 1;
+            //     display: flex;
+            //     justify-content: space-between;
+            //     gap: 16px;
+            // }
+        
+            // &_button_commande {
+            //    margin: 64px auto;
+            // }
 
 .button_commande {
     text-align: center;
     padding: 24px;
-}
+    }
 
 
 

@@ -108,7 +108,7 @@
 
 .menuItem {
         background-color: #fff;
-        padding: 16px;
+        // padding: 16px;
         display: flex;
         border-radius: 12px;
         margin: 16px 16px;
@@ -121,7 +121,13 @@
         transform: scale(1);
         max-width: 100%; 
 
+        &:hover{
+            background-color: red;
+            animation: logo 1s ease-in-out;
+        } 
+
         &-header{
+            padding: 10px;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -144,21 +150,22 @@
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
-            padding-left: 8px; 
+            padding: 10px; 
         }
 
         &-confirmation{
                 background-color: #99e2d0;
                 // margin: -16px -80px -16px 16px;
-                width: 64px;
+                width: 0px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                transition-duration: .5s;
+                // transition-duration: .5s;
 
-                &:hover{
-                    margin-right: 16px;
-                }
+                // &:hover{
+                //     background-color: red;
+                //     animation: logo 1s ease-in-out;
+                // }
         }
 
         &-wrapIcon{
@@ -169,17 +176,17 @@
             align-items: center;
             justify-content: center;
             border-radius: 100px;
-            transform: rotate(180deg);
-            transition-duration: .5s; 
+            // transform: rotate(180deg);
+            // transition-duration: .5s; 
         }
 
         &-Icon{
             color: #99e2d0;
         }
 
-        & > *  {
-            border: 1px solid;
-        }
+        // & > *  {
+        //     border: 1px solid;
+        // }
 
         @media screen and (min-width: map-get($breakpoint,tablette)) {
                 padding-left: 325px;
@@ -206,6 +213,16 @@
     text-align: center;
     padding: 24px;
     }
+
+@keyframes logo { 
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 64px;
+    }
+}
 
 
 

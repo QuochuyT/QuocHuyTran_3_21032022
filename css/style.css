@@ -378,7 +378,6 @@ main .section__restaurants-cards-description {
 
 .menuItem {
   background-color: #fff;
-  padding: 16px;
   display: flex;
   border-radius: 12px;
   margin: 16px 16px;
@@ -391,7 +390,12 @@ main .section__restaurants-cards-description {
   transform: scale(1);
   max-width: 100%;
 }
+.menuItem:hover {
+  background-color: red;
+  animation: logo 1s ease-in-out;
+}
 .menuItem-header {
+  padding: 10px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -411,18 +415,14 @@ main .section__restaurants-cards-description {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-left: 8px;
+  padding: 10px;
 }
 .menuItem-confirmation {
   background-color: #99e2d0;
-  width: 64px;
+  width: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-duration: 0.5s;
-}
-.menuItem-confirmation:hover {
-  margin-right: 16px;
 }
 .menuItem-wrapIcon {
   height: 25.6px;
@@ -432,14 +432,9 @@ main .section__restaurants-cards-description {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
 }
 .menuItem-Icon {
   color: #99e2d0;
-}
-.menuItem > * {
-  border: 1px solid;
 }
 @media screen and (min-width: 768px) {
   .menuItem {
@@ -466,6 +461,15 @@ main .section__restaurants-cards-description {
 .button_commande {
   text-align: center;
   padding: 24px;
+}
+
+@keyframes logo {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 64px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

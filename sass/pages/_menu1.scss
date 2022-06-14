@@ -6,6 +6,7 @@
 }
 
 .header .blacklink {
+        color: black;
         margin: 16px;
         position: absolute;
         cursor: pointer;
@@ -14,8 +15,8 @@
 }
 
 .container-menu {
-    margin-top: -6px;
-    // border-radius: 32px 32px 0 0;
+    margin-top: -60px;
+    border-radius: 32px 32px 0 0;
     background-color: #f6f6f6;
     z-index: 1;
     position: relative;
@@ -110,7 +111,7 @@
         padding: 16px;
         display: flex;
         border-radius: 12px;
-        margin: 16px 0;
+        margin: 16px 16px;
         box-shadow: 4px 4px 16px rgb(0 0 0 / 10%);
         overflow: hidden;
         cursor: pointer;
@@ -127,67 +128,134 @@
             flex: 1;
         }
 
+        &-title{
+            margin: 0px;
+        }
+
+        &-description{
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        &-price{
+            font-weight: 700;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding-left: 8px; 
+        }
+
+        &-confirmation{
+                background-color: #99e2d0;
+                margin: -16px -80px -16px 16px;
+                width: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition-duration: .5s;
+
+                &:hover{
+                    margin-right: 16px;
+                }
+        }
+
+        &-wrapIcon{
+            height: 25.6px;
+            width: 25.6px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100px;
+            transform: rotate(180deg);
+            transition-duration: .5s; 
+        }
+
+        &-Icon{
+            color: #99e2d0;
+        }
+        
+        @media screen and (min-width: map-get($breakpoint,tablette)) {
+                padding-left: 325px;
+            }
+        
+        @media screen and (min-width: map-get($breakpoint,desktop)) {
+            font-weight: 600;
+            justify-content: flex-end;
+            width: 140px;
+            display: flex;
+            align-items: flex-end;
+            max-width: 100%;
+            overflow: hidden;
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            max-width: 50px;
+        }
+
     }
     
      
-.menuItem-header {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        flex: 1;
-}
+// .menuItem-header {
+//         white-space: nowrap;
+//         text-overflow: ellipsis;
+//         overflow: hidden;
+//         flex: 1;
+// }
 
-.menuItem-title {
-    margin: 0px;
+// .menuItem-title {
+//     margin: 0px;
+// }
 
-}
+// .menuItem-description {
+//     margin: 0;
+//     white-space: nowrap;
+//     text-overflow: ellipsis;
+//     overflow: hidden;
+// }
 
-.menuItem-description {
-    margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
+// .menuItem-price {
+//     font-weight: 700;
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: flex-end;
+//     padding-left: 8px;           
+// }
 
-.menuItem-price {
-    font-weight: 700;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-left: 8px;           
-}
+// .menuItem-confirmation {
+//     background-color: #99e2d0;
+//     margin: -16px -80px -16px 16px;
+//     width: 64px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     transition-duration: .5s;
 
-.menuItem-confirmation {
-    background-color: #99e2d0;
-    margin: -16px -80px -16px 16px;
-    width: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-duration: .5s;
-
-    &:hover{
-        margin-right: 0px;
-    }
+//     &:hover{
+//         margin-right: 0px;
+//     }
     
-}
+// }
 
-.menuItem-wrapIcon {
-        height: 25.6px;
-        width: 25.6px;
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 100px;
-        transform: rotate(180deg);
-        transition-duration: .5s;  
-}
+// .menuItem-wrapIcon {
+//         height: 25.6px;
+//         width: 25.6px;
+//         background-color: #fff;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         border-radius: 100px;
+//         transform: rotate(180deg);
+//         transition-duration: .5s;  
+// }
 
-.menuitem-Icon {
-        color: #99e2d0; 
-}
-// &-title {
+// .menuitem-Icon {
+//         color: #99e2d0; 
+// }
+        // &-title {
         //     margin: 0;
         // }
 
@@ -206,24 +274,6 @@
         //     padding-left: 8px;           
         // }
 
-        // @media screen and (min-width: map-get($breakpoint,tablette)) {
-        //         padding-left: 325px;
-        //     }
-
-        // @media screen and (min-width: map-get($breakpoint,desktop)) {
-        //     font-weight: 600;
-        //     justify-content: flex-end;
-        //     width: 140px;
-        //     display: flex;
-        //     align-items: flex-end;
-        //     max-width: 100%;
-        //     overflow: hidden;
-        //     flex: 1;
-        //     display: flex;
-        //     justify-content: space-between;
-        //     gap: 16px;
-        //     max-width: 50px;
-        // }
 
         // &-confirmation {  
         //         background-color: #99e2d0;

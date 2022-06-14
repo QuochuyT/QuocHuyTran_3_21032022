@@ -2,15 +2,18 @@
     $animation-duration: 1s;
     $animation-count: 3;
     position: fixed;
-    display: grid;
+    display: flex;
     place-items: center;
+    align-items: center;
+    justify-content: center;
     background-color: #ffffff;
-    height: 1000px;
+    height: 100%;
     inset: 0;
     z-index: 2;
     opacity: 0.9;
     animation: disappear 200ms $animation-duration * $animation-count forwards;
     transform-origin: top;
+
     &:after {
         content: "";
         height: 100px;
@@ -27,7 +30,6 @@
     to{
         transform: scale(0);
     }
-
 }
 
 @keyframes spin {

@@ -62,10 +62,12 @@ a {
 
 .loader {
   position: fixed;
-  display: grid;
+  display: flex;
   place-items: center;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
-  height: 1000px;
+  height: 100%;
   inset: 0;
   z-index: 2;
   opacity: 0.9;
@@ -174,7 +176,7 @@ main .city-searchforminput-placeholder {
   padding: 16px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   position: relative;
-  z-index: 1000;
+  z-index: 1;
 }
 .header_logo {
   font-family: Shrikhand, "cursive";
@@ -306,6 +308,7 @@ main .section__restaurants-cards-description {
 }
 
 .header .blacklink {
+  color: black;
   margin: 16px;
   position: absolute;
   cursor: pointer;
@@ -314,7 +317,8 @@ main .section__restaurants-cards-description {
 }
 
 .container-menu {
-  margin-top: -6px;
+  margin-top: -60px;
+  border-radius: 32px 32px 0 0;
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
@@ -377,7 +381,7 @@ main .section__restaurants-cards-description {
   padding: 16px;
   display: flex;
   border-radius: 12px;
-  margin: 16px 0;
+  margin: 16px 16px;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
@@ -393,25 +397,15 @@ main .section__restaurants-cards-description {
   overflow: hidden;
   flex: 1;
 }
-
-.menuItem-header {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  flex: 1;
-}
-
 .menuItem-title {
   margin: 0px;
 }
-
 .menuItem-description {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
 .menuItem-price {
   font-weight: 700;
   display: flex;
@@ -419,7 +413,6 @@ main .section__restaurants-cards-description {
   align-items: flex-end;
   padding-left: 8px;
 }
-
 .menuItem-confirmation {
   background-color: #99e2d0;
   margin: -16px -80px -16px 16px;
@@ -430,9 +423,8 @@ main .section__restaurants-cards-description {
   transition-duration: 0.5s;
 }
 .menuItem-confirmation:hover {
-  margin-right: 0px;
+  margin-right: 16px;
 }
-
 .menuItem-wrapIcon {
   height: 25.6px;
   width: 25.6px;
@@ -444,9 +436,29 @@ main .section__restaurants-cards-description {
   transform: rotate(180deg);
   transition-duration: 0.5s;
 }
-
-.menuitem-Icon {
+.menuItem-Icon {
   color: #99e2d0;
+}
+@media screen and (min-width: 768px) {
+  .menuItem {
+    padding-left: 325px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menuItem {
+    font-weight: 600;
+    justify-content: flex-end;
+    width: 140px;
+    display: flex;
+    align-items: flex-end;
+    max-width: 100%;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 50px;
+  }
 }
 
 .button_commande {

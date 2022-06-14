@@ -149,7 +149,7 @@
 
         &-confirmation{
                 background-color: #99e2d0;
-                margin: -16px -80px -16px 16px;
+                // margin: -16px -80px -16px 16px;
                 width: 64px;
                 display: flex;
                 align-items: center;
@@ -176,7 +176,11 @@
         &-Icon{
             color: #99e2d0;
         }
-        
+
+        & > *  {
+            border: 1px solid;
+        }
+
         @media screen and (min-width: map-get($breakpoint,tablette)) {
                 padding-left: 325px;
             }
@@ -197,141 +201,6 @@
         }
 
     }
-    
-     
-// .menuItem-header {
-//         white-space: nowrap;
-//         text-overflow: ellipsis;
-//         overflow: hidden;
-//         flex: 1;
-// }
-
-// .menuItem-title {
-//     margin: 0px;
-// }
-
-// .menuItem-description {
-//     margin: 0;
-//     white-space: nowrap;
-//     text-overflow: ellipsis;
-//     overflow: hidden;
-// }
-
-// .menuItem-price {
-//     font-weight: 700;
-//     display: flex;
-//     justify-content: flex-end;
-//     align-items: flex-end;
-//     padding-left: 8px;           
-// }
-
-// .menuItem-confirmation {
-//     background-color: #99e2d0;
-//     margin: -16px -80px -16px 16px;
-//     width: 64px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     transition-duration: .5s;
-
-//     &:hover{
-//         margin-right: 0px;
-//     }
-    
-// }
-
-// .menuItem-wrapIcon {
-//         height: 25.6px;
-//         width: 25.6px;
-//         background-color: #fff;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         border-radius: 100px;
-//         transform: rotate(180deg);
-//         transition-duration: .5s;  
-// }
-
-// .menuitem-Icon {
-//         color: #99e2d0; 
-// }
-        // &-title {
-        //     margin: 0;
-        // }
-
-        // &-description {
-        //     margin: 0;
-        //     white-space: nowrap;
-        //     text-overflow: ellipsis;
-        //     overflow: hidden;
-        // }
-
-        // &-price {
-        //     font-weight: 700;
-        //     display: flex;
-        //     justify-content: flex-end;
-        //     align-items: flex-end;
-        //     padding-left: 8px;           
-        // }
-
-
-        // &-confirmation {  
-        //         background-color: #99e2d0;
-        //         margin: -16px -80px -16px 36px;
-        //         width: 64px;
-        //         display: flex;
-        //         align-items: center;
-        //         justify-content: center;
-        //         transition-duration: .5s;
-                // $button-width: 48px;
-                // background-color: #99e2d0;
-                // margin-right: -64px;
-                // width: $button-width;
-                // position: absolute;
-                // right: 0;
-                // top: 0;
-                // height: 100%;
-                // width: 64px;
-                // display: flex;
-                // align-items: center;
-                // justify-content: center;
-                // transition-duration: .5s;
-                
-                // &:hover {
-                //     margin-right: -16px;
-                // }
-            
-        
-            
-            // &-wrapIcon {
-            //     height: 25.6px;
-            //     width: 25.6px;
-            //     background-color: #fff;
-            //     display: flex;
-            //     align-items: center;
-            //     justify-content: center;
-            //     border-radius: 100px;
-            //     transform: rotate(0deg);
-            //     transition-duration: .5s;  
-            // }
-        
-            // &-Icon {
-            //     color: #99e2d0;
-            // }
-        
-            // &-menuItem {
-            //     padding: 16px;
-            //     max-width: 100%;
-            //     overflow: hidden;
-            //     flex: 1;
-            //     display: flex;
-            //     justify-content: space-between;
-            //     gap: 16px;
-            // }
-        
-            // &_button_commande {
-            //    margin: 64px auto;
-            // }
 
 .button_commande {
     text-align: center;

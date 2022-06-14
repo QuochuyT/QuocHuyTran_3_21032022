@@ -415,7 +415,6 @@ main .section__restaurants-cards-description {
 }
 .menuItem-confirmation {
   background-color: #99e2d0;
-  margin: -16px -80px -16px 16px;
   width: 64px;
   display: flex;
   align-items: center;
@@ -438,6 +437,9 @@ main .section__restaurants-cards-description {
 }
 .menuItem-Icon {
   color: #99e2d0;
+}
+.menuItem > * {
+  border: 1px solid;
 }
 @media screen and (min-width: 768px) {
   .menuItem {

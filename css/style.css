@@ -95,6 +95,15 @@ a {
     transform: rotate(360deg);
   }
 }
+@keyframes Appear {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
 main .tuto {
   counter-reset: ope;
   flex-wrap: wrap;
@@ -377,8 +386,20 @@ main .section__restaurants-cards-description {
   }
 }
 
-.delai-0 {
-  animation-delay: 0s;
+.menuItem:nth-of-type(1) {
+  animation-delay: 0.4s;
+}
+
+.menuItem:nth-of-type(2) {
+  animation-delay: 0.6s;
+}
+
+.menuItem:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+
+.menuItem:nth-of-type(4) {
+  animation-delay: 1s;
 }
 
 .menuItem {
@@ -389,24 +410,13 @@ main .section__restaurants-cards-description {
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  animation: Appear 0.1s;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  animation-fill-mode: both;
+  animation: Appear 2s 1 forwards;
+  opacity: 0;
   transform: scale(1);
   max-width: 100%;
 }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .menuItem:hover .menuItem-confirmation {
-  animation: logo 600ms ease-in-out;
+  margin-right: 0px;
 }
 .menuItem:hover .menuItem-wrapIcon {
   transform: rotate(360deg);
@@ -437,12 +447,12 @@ main .section__restaurants-cards-description {
 }
 .menuItem-confirmation {
   background-color: #99e2d0;
-  width: 0px;
-  position: relative;
-  right: -20px;
+  width: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: -70px;
+  transition: margin 0.5s;
 }
 .menuItem-wrapIcon {
   height: 25.6px;
@@ -452,23 +462,14 @@ main .section__restaurants-cards-description {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  margin-right: 20px;
 }
 .menuItem .menuitem-Icon {
   color: #99e2d0;
 }
+
 .button_commande {
   text-align: center;
   padding: 24px;
-}
-
-@keyframes logo {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 84px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

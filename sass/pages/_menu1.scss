@@ -62,9 +62,17 @@
     display: inherit;
 
     @media screen and (min-width: map-get($breakpoint,desktop)) {
-        grid-template-columns: repeat(3,1fr);
-        column-gap: 1rem;
+        display: flex;
+        justify-content: space-between;
+
     }
+
+    .submenus {
+        @media screen and (min-width: map-get($breakpoint,desktop)) {
+            width: 33%;
+        }
+    }
+
 
     .submenu-title {
         text-transform: uppercase;

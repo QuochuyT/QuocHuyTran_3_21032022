@@ -12,8 +12,7 @@
     @media screen and (min-width: map-get($breakpoint,desktop)) {
     align-items: baseline;
     flex-direction: inherit;
-    gap: 120px;
-    padding: 24px 0px 24px 32px;
+    justify-content: space-between;
     }
 
 

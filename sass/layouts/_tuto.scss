@@ -10,11 +10,8 @@ main .tuto {
     & ol {
         display: flex;
         flex-direction: column;
-        // @media (min-width: 768px){
-        //     flex-direction: row;
-        //     flex-wrap: wrap;
-        // }
     }
+    
     & li {
         display: flex;
         align-items: center;

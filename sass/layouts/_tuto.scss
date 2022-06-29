@@ -10,15 +10,29 @@ main .tuto {
     & ol {
         display: flex;
         flex-direction: column;
+        padding: 0px;
+        :nth-child(1) {
+            counter-increment: step 1;
+        }
+
+        :nth-child(2) {
+            counter-increment: step 0;
+        }
+
+        :nth-child(3) {
+            counter-increment: step 0;
+        }
     }
     
     & li {
+
         display: flex;
         align-items: center;
         position: relative;
         list-style-type: none;
         background-color: #f6f6f6;
         padding: 24px;
+        margin-bottom: 16px;
         flex-grow: 1;
         border-radius: 20px;
         gap: 32px;
@@ -34,7 +48,7 @@ main .tuto {
 
         &::before {
             content: counter(step);
-            counter-increment: step;
+            // counter-increment: step;
             color: white;
             background-color: $purple;
             width: 2 *$tuto-bullet-height;

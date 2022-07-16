@@ -1,7 +1,7 @@
 // Page Chargement //
 
 .loader {
-    $animation-duration: 3s;
+    $animation-duration: 1s;
     $animation-count: 3;
     position: fixed;
     display: flex;
@@ -24,7 +24,7 @@
         border-top: 5px solid $colorsecondaire;
         border-radius: 50%;
         animation: spin $animation-duration ease-in-out;
-        animation-iteration-count: 2;
+        animation-iteration-count: $animation-count;
     }
 }
 

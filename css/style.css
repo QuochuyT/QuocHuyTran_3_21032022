@@ -71,7 +71,7 @@ a {
   inset: 0;
   z-index: 2;
   opacity: 0.9;
-  animation: disappear 200ms 9s forwards;
+  animation: disappear 200ms 3s forwards;
   transform-origin: top;
 }
 .loader:after {
@@ -81,8 +81,8 @@ a {
   border-right: 5px solid transparent;
   border-top: 5px solid #FF79DA;
   border-radius: 50%;
-  animation: spin 3s ease-in-out;
-  animation-iteration-count: 2;
+  animation: spin 1s ease-in-out;
+  animation-iteration-count: 3;
 }
 
 @keyframes disappear {

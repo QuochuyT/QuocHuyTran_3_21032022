@@ -24,7 +24,7 @@
         border-top: 5px solid $colorsecondaire;
         border-radius: 50%;
         animation: spin $animation-duration ease-in-out;
-        animation-iteration-count: $animation-count;
+        animation-iteration-count: 3;
     }
 }
 

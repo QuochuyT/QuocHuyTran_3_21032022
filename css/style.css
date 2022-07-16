@@ -182,8 +182,8 @@ main .city-searchforminput {
   border-top: #F3F3F3 24px solid;
   border-bottom: #F3F3F3 24px solid;
   background-color: #F3F3F3;
-  padding: 0 8px;
-  width: 220px;
+  padding: 0px;
+  width: 230px;
   font-weight: bold;
   font-size: 26px;
 }
@@ -441,6 +441,8 @@ main .section__restaurants-cards-description {
 }
 .menuItem-title {
   margin: 0px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menuItem-description {
   margin: 0;

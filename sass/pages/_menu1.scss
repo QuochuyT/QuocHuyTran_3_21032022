@@ -135,6 +135,8 @@
 
         &-title{
             margin: 0px;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
 
         &-description{
